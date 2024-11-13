@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "IP Getter",
+  "version": "1.0",
+  "description": "Getting the IP address of the site.",
+  "homepage_url": "https://github.com/Hazardooo/ip-getter",
+  "icons": {
+    "48": "icons/icon48.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Get site ip",
+    "default_popup": "popup/popup.html"
+  }
+}
