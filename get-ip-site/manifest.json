@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "IPGetter",
+  "version": "1.0",
+
+  "description": "Get site ip.",
+
+  "icons": {
+    "48": "icons/ipgetter-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["ipgetter.js"]
+    }
+  ]
+}
