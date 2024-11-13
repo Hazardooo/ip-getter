@@ -1,14 +1,14 @@
 async function getIP(domain) {
     try {
         const response = await fetch(`https://dns.google/resolve?name=${domain}`);
-        if (!response.ok) throw new Error('Ошибка запроса к API');
+        if (!response.ok) throw new Error('API request error');
         const data = await response.json();
 
         const ipAddress = data.Answer?.find(record => record.type === 1)?.data;
-        return ipAddress || 'IP адрес не найден';
+        return ipAddress || 'The IP address was not found';
     } catch (error) {
         console.error(error);
-        return 'Ошибка получения IP';
+        return 'Error getting the IP';
     }
 }
 
